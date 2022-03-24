@@ -15,7 +15,8 @@ function writeWeather(data) {
     
     const dados = document.querySelector('.teste')
     let tempAtual = data.main.temp
-    dados.innerHTML += `A temperatura atual em Salvador é de ${tempAtual.toLocaleString('pt-BR')}`
+    let sensacaoT = data.main.feels_like
+    dados.innerText += `A temperatura atual em Salvador é de ${tempAtual.toLocaleString('pt-BR')} A sensação térmica é de ${sensacaoT.toLocaleString('pt-BR')}`
     console.log(tempAtual)
   }
  
